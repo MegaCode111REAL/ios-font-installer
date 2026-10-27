@@ -211,8 +211,8 @@
 				</label>
 				{#if fontFiles.length}
 					<div class="selected-files">
-						{#each fontFiles as file, index}
-							<div class="selected-file" key={file.name + file.size + index}><span class="symbol">description</span><span>{file.name}</span><span class="file-size">{(file.size / 1024).toFixed(0)} KB</span></div>
+						{#each fontFiles as file, index (file.name + file.size + index)}
+							<div class="selected-file"><span class="symbol">description</span><span>{file.name}</span><span class="file-size">{(file.size / 1024).toFixed(0)} KB</span></div>
 						{/each}
 					</div>
 				{/if}
